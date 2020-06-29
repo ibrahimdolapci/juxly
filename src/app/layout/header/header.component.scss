@@ -1,0 +1,57 @@
+@import "variables/colors";
+@import "variables/theme";
+
+:host {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  padding: 0 10%;
+}
+
+.menu {
+  margin: auto;
+
+  ul {
+    display: flex;
+
+    li {
+      font-weight: 500;
+      position: relative;
+
+      &.active {
+        color: $primary-color;
+
+        &::after {
+          content: "";
+          width: 6px;
+          height: 6px;
+          background-color: $primary-color;
+          position: absolute;
+          bottom: -12px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+
+    li + li {
+      margin-left: $space;
+    }
+  }
+}
+
+.phone {
+  display: flex;
+  align-items: center;
+
+  .icon {
+    color: $primary-color;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-right: $space-2xs;
+  }
+
+  span {
+    font-weight: 500;
+  }
+}

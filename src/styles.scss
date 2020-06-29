@@ -1,0 +1,114 @@
+@import "global.scss";
+@import "variables/theme";
+@import "variables/colors";
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-size: $font-size;
+  color: $font-color-1;
+}
+
+button {
+  font-family: "Rubik", sans-serif;
+  border: none;
+  cursor: pointer;
+
+  &.outline {
+    border: 1px solid $primary-color;
+    background-color: $color-1;
+    color: $primary-color;
+
+    &.md {
+      border-radius: 15px;
+      padding: $space-2xs $space;
+      font-size: 0.857rem;
+    }
+
+    &.lg {
+      border-radius: 30px;
+      padding: $space-sm $space-3xl;
+      font-weight: 500;
+      border-width: 2px;
+    }
+  }
+}
+
+.pre-header {
+  font-size: 0.785rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $primary-color;
+
+  &.with-point::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-top: 2px;
+    width: 8px;
+    height: 8px;
+    background-color: $primary-color;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Halant', serif;
+}
+
+h2 {
+  font-size: 2.142rem;
+  font-weight: 500;
+  line-height: 3.142rem;
+  color: $font-color-1;
+}
+
+h3 {
+  font-size: 1.714rem;
+}
+
+h4 {
+  font-size: 1.285rem;
+}
+
+p {
+  line-height: 1.857rem;
+}
+
+a {
+  color: $primary-color;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Merriweather', serif;
+  text-decoration: underline;
+}
+
+strong {
+  color: $primary-color;
+  font-weight: bold;
+  font-style: italic;
+  font-family: 'Merriweather', serif;
+}
+
+.form-control {
+  margin: $space-2xs 0;
+  border: 1px solid $color-5;
+  box-sizing: border-box;
+  display: flex;
+
+  input, textarea {
+    border: none;
+
+    &::placeholder {
+      font-weight: 500;
+    }
+  }
+
+  input {
+    margin: $space-md;
+  }
+
+  textarea {
+    margin: $space-md 0 0 $space-md;
+    height: 80px;
+  }
+}

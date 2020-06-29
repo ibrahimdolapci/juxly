@@ -1,0 +1,119 @@
+@import "variables/icons";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yzhxk9');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?yzhxk9#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?yzhxk9') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?yzhxk9') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?yzhxk9##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-criminal {
+  &:before {
+    content: $icon-criminal; 
+  }
+}
+.icon-drug {
+  &:before {
+    content: $icon-drug; 
+  }
+}
+.icon-family {
+  &:before {
+    content: $icon-family; 
+  }
+}
+.icon-market {
+  &:before {
+    content: $icon-market; 
+  }
+}
+.icon-real-estate {
+  &:before {
+    content: $icon-real-estate; 
+  }
+}
+.icon-transportation {
+  &:before {
+    content: $icon-transportation; 
+  }
+}
+.icon-gavel {
+  &:before {
+    content: $icon-gavel; 
+  }
+}
+.icon-award {
+  &:before {
+    content: $icon-award; 
+  }
+}
+.icon-scales {
+  &:before {
+    content: $icon-scales; 
+  }
+}
+.icon-phone {
+  &:before {
+    content: $icon-phone; 
+  }
+}
+.icon-people {
+  &:before {
+    content: $icon-people; 
+  }
+}
+.icon-arrow-up {
+  &:before {
+    content: $icon-arrow-up; 
+  }
+}
+.icon-arrow-right {
+  &:before {
+    content: $icon-arrow-right; 
+  }
+}
+.icon-arrow-down {
+  &:before {
+    content: $icon-arrow-down; 
+  }
+}
+.icon-arrow-left {
+  &:before {
+    content: $icon-arrow-left; 
+  }
+}
+.icon-facebook {
+  &:before {
+    content: $icon-facebook; 
+  }
+}
+.icon-twitter {
+  &:before {
+    content: $icon-twitter; 
+  }
+}
+.icon-linkedin {
+  &:before {
+    content: $icon-linkedin; 
+  }
+}
+

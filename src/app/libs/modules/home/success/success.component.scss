@@ -1,0 +1,92 @@
+@import "variables/theme";
+@import "variables/colors";
+
+:host {
+  padding: $space-4xl 20%;
+  display: flex;
+  margin-top: 100px;
+  background-image: url("/assets/images/home/success.png");
+  background-color: $secondary-color;
+}
+
+.info {
+  color: $font-color-4;
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+
+  h2 {
+    color: $font-color-4;
+  }
+
+  p {
+    opacity: .5;
+    margin-top: $space-2xs;
+  }
+
+  a {
+    margin-top: $space-xl;
+  }
+}
+
+.counts {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 50%;
+
+  .item {
+    display: flex;
+    flex-basis: 50%;
+    height: 85px;
+
+    .icon-container {
+      width: 85px;
+      height: 85px;
+      border: 1px solid $primary-color;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-sizing: border-box;
+
+      &::after {
+        content: "";
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        background-color: $primary-color;
+        right: 0;
+        bottom: 0;
+      }
+
+      .icon {
+        font-size: 2.857rem;
+        color: $primary-color;
+      }
+    }
+
+    .count {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: $font-color-4;
+      margin-left: $space-sm;
+      font-weight: 500;
+
+      span:first-child {
+        font-size: 3.428rem;
+      }
+
+      span:last-child {
+        opacity: .5;
+        font-size: 0.857rem;
+        text-transform: uppercase;
+      }
+    }
+
+    &:first-child {
+      margin-bottom: $space-3xl;
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@import "variables/theme";
+@import "variables/colors";
+
+:host {
+  padding: 0 20%;
+  display: flex;
+}
+
+.content {
+  margin-left: $space-lg;
+
+  .pre-header {
+    padding-left: $space-3xl;
+    position: relative;
+  }
+
+  h2 {
+    margin-bottom: $space-xl;
+  }
+
+  .descriptions {
+    display: flex;
+
+    p{
+      opacity: .75;
+      &:last-child {
+        margin-left: $space-lg;
+      }
+    }
+  }
+
+  .legal-awards {
+    margin-top: $space-xl;
+
+    h4 {
+      margin-bottom: $space-md;
+    }
+
+    .container {
+      display: flex;
+
+      .item {
+        width: 100px;
+        height: 100px;
+        border: 1px solid $color-5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &:not(:first-child) {
+          margin-left: $space-lg;
+        }
+
+        &::after {
+          content: "";
+          height: 8px;
+          width: 8px;
+          position: absolute;
+          background-color: $color-5;
+          right: 0;
+          bottom: 0;
+        }
+
+        &:hover {
+          border-color: $primary-color;
+          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+
+          &::after {
+            background-color: $primary-color;
+          }
+        }
+      }
+    }
+  }
+}

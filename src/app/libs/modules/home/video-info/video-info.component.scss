@@ -1,0 +1,65 @@
+@import "variables/theme";
+@import "variables/colors";
+
+:host {
+  padding: 0 20%;
+  display: flex;
+  margin-top: 170px;
+}
+
+.content {
+  flex-basis: 50%;
+
+  h2 {
+    margin-bottom: $space;
+  }
+
+  p {
+    opacity: .75;
+  }
+
+  .author {
+    display: flex;
+    align-items: center;
+    margin-top: $space-2xs;
+
+    div:first-child {
+      display: flex;
+      flex-direction: column;
+
+      .name {
+        margin-bottom: $space-xs;
+        font-weight: bold;
+        font-family: 'Merriweather', serif;
+      }
+
+      .title {
+        font-size: 0.785rem;
+        text-transform: uppercase;
+        opacity: 50%;
+        font-weight: bold;
+      }
+    }
+
+    .signature {
+      position: relative;
+      margin-left: $space-3xl;
+
+      &::before {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        left: -32px;
+        top: 50%;
+        width: 2px;
+        height: 36px;
+        transform: translateY(-50%);
+        background-color: $color-6;
+      }
+    }
+  }
+}
+
+img {
+  margin-left: auto;
+}
