@@ -6,13 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  
+
   links = [{
     name: "Home",
     route: "home"
   }, {
     name: "About Us",
-    route: "about"
+    route: "about-us"
   }, {
     name: "Practice Area",
     route: "practice-area"

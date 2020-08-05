@@ -1,0 +1,30 @@
+<div class="container" #scrollContent [class.auto]="!(scrollY$ | async)">
+  <div class="slider-item" [class.selected]="index == selectedIndex"
+    [ngStyle]="{ 'background-image': 'url(' + item.image + ')' }" *ngFor="let item of sliderItems; let index = index">
+    <div class="content" [ngClass]="'step-'+step">
+      <span class="pre-header" [class.show]="virtualScroll > steps[0]">Legal Counseling</span>
+      <h2 [class.show]="virtualScroll > steps[1]">
+        If you have any -<br />
+        legal problem in your life...<br />
+        <strong>we are available</strong>
+      </h2>
+
+      <button [class.show]="virtualScroll > steps[2]">
+        <i class="icon icon-bubbles4"></i>
+        <span>Get Consultation</span>
+      </button>
+    </div>
+  </div>
+  <div class="wrapper"></div>
+</div>
+<div class="slider-buttons">
+  <div class="button-container">
+    <i class="slider-button-item icon icon-arrow-up" (click)="up()"></i>
+    <div *ngFor="let item of sliderItems; let index = index" class="slider-button-item slider-button"
+      [class.selected]="index == selectedIndex" (click)="select(index)">
+      <div class="box" [ngStyle]="{ height: 'calc(16px + ' + virtualScroll + '%)' }"></div>
+    </div>
+    <i class="slider-button-item icon icon-arrow-down" (click)="down()"></i>
+  </div>
+  <i class="icon icon-scroll"></i>
+</div>

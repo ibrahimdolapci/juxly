@@ -1,0 +1,30 @@
+@import "variables/theme";
+@import "variables/colors";
+
+:host {
+  padding: $space-4xl 20%;
+  display: flex;
+  flex-direction: column;
+}
+
+.descriptions {
+  padding-left: 10%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+
+  p {
+    color: $font-color-1;
+  }
+}
+
+.blogs {
+  display: flex;
+  margin-top: $space-lg;
+  justify-content: space-between;
+
+  app-blog-item {
+    flex-basis: 30%;
+  }
+}

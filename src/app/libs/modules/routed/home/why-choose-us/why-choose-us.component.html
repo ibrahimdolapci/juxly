@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="description">
+        <h2>We Are Best</h2>
+        <h2>Why Choose US</h2>
+        <p>Law is complex from a methodological viewpoint. Its peculiar features make its unique against excepteur sint
+            occaecat cupidatat non proident.</p>
+        <div class="contact">
+            <h6>Call Now For Immediate</h6>
+            <h6>Assistance & Free Consultations</h6>
+            <h4 class="phone">1-888-446-6996</h4>
+        </div>
+    </div>
+
+    <div class="accordion">
+        <div class="accordion-item" [class.active]="activeIndex == index" (click)="activeIndex = index;"
+            *ngFor="let item of items;let index = index">
+            <div class="header">
+                <div class="index">
+                    <p>0{{index+1}}</p>
+                </div>
+                <h6 class="title"> {{item.title}}</h6>
+            </div>
+            <div class="content" [@slideInOut]="activeIndex == index">
+                <p>{{item.content}}</p>
+            </div>
+        </div>
+    </div>
+</div>

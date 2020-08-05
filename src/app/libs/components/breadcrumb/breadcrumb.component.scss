@@ -1,0 +1,50 @@
+@import "variables/colors";
+@import "variables/theme";
+
+:host {
+  height: 200px;
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: $secondary-color;
+  background-image: url(/assets/images/breadcrumb-bg.png);
+  color: $font-color-4;
+}
+
+a {
+  color: $font-color-4;
+  font-weight: normal;
+}
+
+ul {
+  display: flex;
+  margin-bottom: $space-sm;
+  font-size: 0.785rem;
+
+  li {
+    display: flex;
+    text-transform: uppercase;
+
+    &:last-child {
+      font-weight: 500;
+
+      &::before {
+        content: '-';
+        display: inline-block;
+        margin: 0 $space-3xs;
+      }
+
+      a {
+        color: $font-color-4;
+        opacity: 1;
+      }
+    }
+
+    a {
+      font-family: "Rubik", sans-serif;
+      color: $font-color-4;
+      opacity: .5;
+    }
+  }
+}

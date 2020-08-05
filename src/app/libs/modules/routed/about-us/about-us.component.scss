@@ -1,0 +1,332 @@
+@import "variables/theme";
+@import "variables/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  padding: $space-lg 20%;
+  display: flex;
+  flex-direction: column;
+
+  .features {
+    display: flex;
+    justify-content: space-between;
+
+    .card {
+      background-color: $color-2;
+      padding: $space-lg $space-md;
+      transition: all .3s ease-out;
+
+      &:not(:first-child) {
+        margin-left: $space-lg;
+      }
+
+      &:hover {
+        box-shadow: 0px 15px 30px 0px rgba(0, 0, 0, 0.15);
+      }
+
+      i {
+        font-size: 2.714rem;
+        color: $primary-color;
+      }
+
+      h6 {
+        margin: $space-md 0;
+        font-weight: bold;
+        color: $secondary-color;
+      }
+
+      p {
+        font-size: 1.071rem;
+        opacity: .75;
+      }
+    }
+  }
+
+  .article {
+    margin-top: $space-3xl;
+    display: flex;
+    color: $secondary-color;
+
+    .qualified {
+      flex-shrink: 1.2;
+      margin-left: $space-5xl;
+
+      p {
+        font-size: 1.285rem;
+        font-style: italic;
+      }
+
+      h5 {
+        font-weight: 500;
+
+        em {
+          font-weight: bold;
+          font-style: italic;
+        }
+      }
+    }
+
+    h3 {
+      font-weight: 500;
+      line-height: 2.857rem;
+    }
+
+    p {
+      margin-top: $space-lg;
+      opacity: .75;
+    }
+
+    .author {
+      display: flex;
+      align-items: center;
+      margin-top: $space-2xs;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        .name {
+          margin-bottom: $space-xs;
+          font-weight: bold;
+          font-family: 'Merriweather', serif;
+          font-size: 1.142rem;
+        }
+
+        .title {
+          font-size: 0.785rem;
+          text-transform: uppercase;
+          opacity: 50%;
+          font-weight: bold;
+        }
+      }
+
+      .signature {
+        position: relative;
+        margin-left: $space-3xl;
+
+        &::before {
+          content: "";
+          position: absolute;
+          display: inline-block;
+          left: -32px;
+          top: 50%;
+          width: 2px;
+          height: 36px;
+          transform: translateY(-50%);
+          background-color: $color-6;
+        }
+      }
+    }
+
+    .video-info {
+      width: 100%;
+      margin-top: $space-3xl;
+    }
+  }
+}
+
+.specs {
+  display: inline-flex;
+  justify-content: center;
+  background-color: $color-2;
+  padding: $space-lg 20%;
+  gap: $space-lg;
+  flex-wrap: wrap;
+
+  .card {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: $space-md $space-sm;
+    background-color: $color-1;
+    overflow: hidden;
+    border: 1px solid $color-5;
+    position: relative;
+    transition: all .3s;
+    box-sizing: border-box;
+
+    &:not(:hover)::after {
+      content: "";
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      background-color: $color-5;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+      background-color: $primary-color;
+      background-image: url("/assets/images/home/practice-area-1.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      color: $font-color-4;
+      border: none;
+
+      i {
+        color: $font-color-4;
+      }
+    }
+
+    i {
+      font-size: 2.714rem;
+      color: $primary-color;
+    }
+
+    span {
+      font-size: 1.142rem;
+      font-weight: 500;
+      line-height: 1.857rem;
+      margin-top: $space-sm;
+    }
+  }
+}
+
+.history {
+  padding: 0 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(/assets/images/home/request-form.png);
+  background-color: $secondary-color;
+  color: $font-color-4;
+
+  h2 {
+    color: $font-color-4;
+    margin: $space-2xl auto;
+  }
+
+  .item {
+    padding: 0 $space-lg;
+    position: relative;
+
+    .period {
+      position: absolute;
+      top: -8px;
+      display: flex;
+      border: $space solid transparent;
+      box-sizing: border-box;
+      width: 48px;
+      height: 48px;
+      background-color: $secondary-color;
+
+      .border {
+        width: 100%;
+        border: 1px solid rgba($color: $color-1, $alpha: 0.1);
+        padding: $space-3xs;
+
+        .point {
+          background-color: $primary-color;
+          height: 100%;
+        }
+      }
+    }
+
+    &.right {
+      margin-left: 50%;
+      border-left: 1px solid rgba($color: $color-1, $alpha: 0.1);
+      text-align: left;
+
+      .period {
+        left: -24px;
+      }
+    }
+
+    &.left {
+      margin-right: 50%;
+      border-right: 1px solid rgba($color: $color-1, $alpha: 0.1);
+      text-align: right;
+
+      .period {
+        right: -24px;
+      }
+    }
+
+    .header {
+      font-family: 'Merriweather', serif;
+      font-size: 1.142rem;
+      font-style: italic;
+      font-weight: bold;
+
+      .date {
+        color: $primary-color;
+        font-style: normal;
+        font-weight: 500;
+      }
+    }
+
+    .content {
+      opacity: .75;
+    }
+  }
+
+  button {
+    width: 150px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba($color: $color-1, $alpha: 0.5);
+    margin: $space-lg auto;
+    color: rgba($color: $color-1, $alpha: 0.5);
+  }
+}
+
+.customers {
+  padding: $space-3xl 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h3 {
+    font-style: italic;
+    margin: $space-sm 20%;
+    text-align: center;
+    line-height: 3.285rem;
+  }
+
+  .container {
+    display: flex;
+    margin: $space-sm 0;
+    gap: $space-lg;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .item {
+      width: 165px;
+      height: 165px;
+      border: 1px solid $color-5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        height: 8px;
+        width: 8px;
+        position: absolute;
+        background-color: $color-5;
+        right: 0;
+        bottom: 0;
+      }
+
+      &:hover {
+        border-color: $primary-color;
+        box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.15);
+
+        &::after {
+          background-color: $primary-color;
+        }
+      }
+    }
+  }
+}

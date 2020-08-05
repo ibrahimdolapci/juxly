@@ -1,0 +1,67 @@
+<app-breadcrumb title="Contact"></app-breadcrumb>
+<div class="container">
+  <agm-map [latitude]="lat" [longitude]="lng" [styles]="styles" [zoom]="12">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+
+  <div>
+    <div class="address-info">
+      <h4>Find Us At:</h4>
+      <p>Monday / Friday 08:00 - 18:30</p>
+      <div>
+        <i class="icon icon-pin"></i>
+        <div>
+          <span class="title">ADDRESS</span>
+          <span class="data">228 Park Ave S New York, NY-1502 US</span>
+        </div>
+      </div>
+      <div>
+        <i class="icon icon-whatsapp"></i>
+        <div>
+          <span class="title">WHATSAPP</span>
+          <span class="data">+888-4466996</span>
+        </div>
+      </div>
+      <div>
+        <i class="icon icon-phone"></i>
+        <div>
+          <span class="title">PHONE</span>
+          <span class="data">+888-4466996</span>
+        </div>
+      </div>
+      <div>
+        <i class="icon icon-info"></i>
+        <div>
+          <span class="title">EMAIL</span>
+          <span class="data">info@justicelawfirm.com</span>
+        </div>
+      </div>
+      <div>
+        <i class="icon icon-facebook"></i>
+        <i class="icon icon-twitter"></i>
+        <i class="icon icon-linkedin"></i>
+      </div>
+    </div>
+    <div class="form">
+      <h4>Send us your Message:</h4>
+      <form [formGroup]="formGroup">
+        <div class="form-control">
+          <input type="text" formControlName="name" placeholder="Name / Surname">
+        </div>
+        <div class="form-control">
+          <input type="text" formControlName="email" placeholder="Email">
+        </div>
+        <div class="form-control">
+          <input type="text" formControlName="phone" placeholder="Telephone">
+        </div>
+        <div class="form-control">
+          <input type="text" formControlName="subject" placeholder="Subject">
+        </div>
+        <div class="form-control message">
+          <textarea type="text" formControlName="message" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</div>

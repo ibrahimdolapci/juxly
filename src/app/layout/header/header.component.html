@@ -1,12 +1,12 @@
 <div class="logo">
-    <img src="assets/images/logo.png" alt="logo">
+  <img src="assets/images/logo.png" alt="logo">
 </div>
 <nav class="menu">
-    <ul>
-        <li [routerLink]="link.route" routerLinkActive="active" *ngFor="let link of links">{{link.name}}</li>
-    </ul>
+  <ul>
+    <li  *ngFor="let link of links"><a class="nav-link" [routerLink]="link.route" routerLinkActive="active">{{link.name}}</a></li>
+  </ul>
 </nav>
 <div class="phone">
-    <i class="icon icon-phone"></i>
-    <span>+5312548454</span>
+  <i class="icon icon-phone"></i>
+  <span>+5312548454</span>
 </div>

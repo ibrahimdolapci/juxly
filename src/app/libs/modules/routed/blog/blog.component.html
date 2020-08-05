@@ -1,0 +1,12 @@
+<app-breadcrumb title="Blog"></app-breadcrumb>
+<div class="container">
+  <ul class="tab-buttons">
+    <li (click)="filter(category.type,index)" *ngFor="let category of categories;let index = index"
+      [class.active]="selectedIndex == index">
+      {{category.name}}
+    </li>
+  </ul>
+  <div class="blogs">
+    <app-blog-item [blog]="blog" *ngFor="let blog of selectedBlogs"></app-blog-item>
+  </div>
+</div>

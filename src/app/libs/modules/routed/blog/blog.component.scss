@@ -1,0 +1,39 @@
+@import "variables/theme";
+@import "variables/colors";
+
+:host {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  padding: $space-3xl 20%;
+
+  .tab-buttons {
+    display: flex;
+    margin-bottom: $space-lg;
+
+    li {
+      padding: $space-xs;
+      font-weight: 500;
+      cursor: pointer;
+
+      &.active {
+        color: $primary-color;
+        border-bottom: 2px solid $primary-color;
+      }
+    }
+
+    li + li {
+      margin-left: $space-lg;
+    }
+  }
+
+  .blogs {
+    display: grid;
+    grid-column-gap: $space-lg;
+    grid-row-gap: $space-3xl;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 540px);
+  }
+}
