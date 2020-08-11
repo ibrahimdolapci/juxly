@@ -13,6 +13,7 @@ import { BlogComponent, BlogProvider } from './blog/blog.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 import { PracticeAreasModule, BlogModule } from '../../domain';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const routes: Routes = [{
   path: '',
@@ -50,7 +51,8 @@ const routes: Routes = [{
     FormsModule,
     RouterModule.forChild(routes),
     PracticeAreasModule,
-    BlogModule
+    BlogModule,
+    LazyLoadImageModule
   ],
   exports: [HomeComponent]
 })

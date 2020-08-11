@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, NgZone } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { fromEvent, Subject, Observable } from 'rxjs';
 import { map, takeUntil, startWith } from 'rxjs/operators';
 import { homeProvider } from '../home.provider';
@@ -25,7 +25,7 @@ export class SliderComponent implements AfterViewInit {
   @ViewChild('scrollContent', { static: false }) scrollContent: ElementRef;
   destroy$ = new Subject();
 
-  constructor(private zone: NgZone) { }
+  constructor() { }
 
   ngOnInit() {
     this.scrollY$ = fromEvent(window, 'scroll').pipe(map(() => window.scrollY));

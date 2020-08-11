@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us.component';
 import { RouterModule } from '@angular/router';
 import { ComponentsModule } from '../../../components';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 
 
@@ -27,7 +28,8 @@ import { ComponentsModule } from '../../../components';
         }
       }
     }]),
-    ComponentsModule
+    ComponentsModule,
+    LazyLoadImageModule
   ]
 })
 export class AboutUsPageModule { }

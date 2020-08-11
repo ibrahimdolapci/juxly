@@ -17,7 +17,7 @@
     <div class="container" #container>
       <div class="client"></div>
       <div class="client" *ngFor="let image of images;let index = index" [class.active]="index == selectedIndex">
-        <img [src]="image" alt="client">
+        <img [lazyLoad]="image" alt="client">
       </div>
       <div class="client"></div>
     </div>

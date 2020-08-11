@@ -14,6 +14,7 @@ import {
 } from './areas';
 import { ComponentsModule } from '@libs/components';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 const routes: Routes = [
   {
@@ -224,7 +225,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     ComponentsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    LazyLoadImageModule
   ],
 })
 export class PracticeAreaDetailModule { }

@@ -1,6 +1,5 @@
 <div class="container" #scrollContent [class.auto]="!(scrollY$ | async)">
-  <div class="slider-item" [class.selected]="index == selectedIndex"
-    [ngStyle]="{ 'background-image': 'url(' + item.image + ')' }" *ngFor="let item of sliderItems; let index = index">
+  <div class="slider-item" [class.selected]="index == selectedIndex" [lazyLoad]="item.image" *ngFor="let item of sliderItems; let index = index">
     <div class="content" [ngClass]="'step-'+step">
       <span class="pre-header" [class.show]="virtualScroll > steps[0]">Legal Counseling</span>
       <h2 [class.show]="virtualScroll > steps[1]">
