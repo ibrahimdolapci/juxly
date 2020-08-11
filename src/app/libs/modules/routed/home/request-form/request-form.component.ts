@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-request-form',
@@ -21,3 +22,5 @@ export class RequestFormComponent implements OnInit {
   }
 
 }
+
+export const RequestFormProvider = homeProvider({ order: 7, component: RequestFormComponent });

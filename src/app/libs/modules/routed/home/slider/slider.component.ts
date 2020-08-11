@@ -1,6 +1,7 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, NgZone } from '@angular/core';
 import { fromEvent, Subject, Observable } from 'rxjs';
-import { map, takeUntil } from 'rxjs/operators';
+import { map, takeUntil, startWith } from 'rxjs/operators';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-slider',
@@ -15,35 +16,42 @@ export class SliderComponent implements AfterViewInit {
   step = 0;
 
   sliderItems = [
-    { image: "/assets/images/home/slider-item-1.png" },
-    { image: "/assets/images/home/slider-item-2.jpg" },
-    { image: "/assets/images/home/slider-item-3.jpg" },
-    { image: "/assets/images/home/slider-item-4.jpg" },
-    { image: "/assets/images/home/slider-item-5.jpg" }
+    { image: "/assets/images/home/slider-item-1.webp" },
+    { image: "/assets/images/home/slider-item-2.webp" },
+    { image: "/assets/images/home/slider-item-3.webp" },
+    { image: "/assets/images/home/slider-item-4.webp" }
   ];
 
   @ViewChild('scrollContent', { static: false }) scrollContent: ElementRef;
   destroy$ = new Subject();
 
-  constructor() { }
+  constructor(private zone: NgZone) { }
+
+  ngOnInit() {
+    this.scrollY$ = fromEvent(window, 'scroll').pipe(map(() => window.scrollY));
+  }
 
   ngAfterViewInit(): void {
     const element = this.scrollContent.nativeElement;
 
     fromEvent(element, 'scroll')
-      .pipe(takeUntil(this.destroy$))
-      .subscribe(({ target }: any) => {
-        const scrollTop = target.scrollTop;
+      .pipe(
+        takeUntil(this.destroy$),
+        map((event: Event) => (event.target as Element).scrollTop),
+        startWith(0)
+      )
+      .subscribe(value => {
         const innerHeight = window.innerHeight;
+        const scrollTop = value + innerHeight - 1;
         const selectedIndex = Math.min(Math.floor(scrollTop / innerHeight), this.sliderItems.length - 1);
         const currentItemScrollTop = scrollTop - (selectedIndex * innerHeight);
 
-        this.virtualScroll = (currentItemScrollTop / innerHeight) * 100;
-        this.step = this.steps.filter(step => this.virtualScroll > step).length;
-        this.selectedIndex = selectedIndex;
+        setTimeout(() => {
+          this.virtualScroll = (currentItemScrollTop / innerHeight) * 100;
+          this.step = this.steps.filter(step => this.virtualScroll > step).length;
+          this.selectedIndex = selectedIndex;
+        });
       });
-
-    this.scrollY$ = fromEvent(window, 'scroll').pipe(map(() => window.scrollY));
   }
 
   select(selectedIndex: number) {
@@ -65,3 +73,5 @@ export class SliderComponent implements AfterViewInit {
     this.destroy$.next();
   }
 }
+
+export const SliderProvider = homeProvider({ order: 1, component: SliderComponent });

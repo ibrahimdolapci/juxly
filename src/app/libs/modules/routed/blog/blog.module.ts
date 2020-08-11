@@ -9,7 +9,23 @@ import { BlogModule } from '@libs/modules/domain';
   declarations: [BlogComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: BlogComponent }]),
+    RouterModule.forChild([{
+      path: '',
+      pathMatch: 'full',
+      component: BlogComponent,
+      data: {
+        breadcrumb: {
+          title: 'Blog',
+          links: [{
+            name: 'Home',
+            path: 'home'
+          }, {
+            name: 'Blog',
+            path: 'blog'
+          }]
+        }
+      }
+    }]),
     ComponentsModule,
     BlogModule
   ]

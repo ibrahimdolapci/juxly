@@ -1,0 +1,109 @@
+@import "variables/colors";
+@import "variables/theme";
+
+.container {
+  margin-top: $space-2xl;
+  padding: 0 20%;
+  display: flex;
+
+  .content {
+    flex: 70%;
+    margin-right: $space-lg;
+  }
+
+  .sidebar {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    width: 30%;
+    color: $font-color-1;
+
+    .practices {
+      background-color: $color-2;
+      padding: $space-sm $space;
+
+      h4 {
+        margin-left: $space-xs;
+      }
+
+      ul {
+        margin-top: $space-md;
+
+        li {
+          position: relative;
+          height: 60px;
+          cursor: pointer;
+
+          &.active {
+            .wrapper {
+              color: $primary-color;
+              background-image: linear-gradient(90deg, $color-1 50%, $color-2 100%);
+            }
+
+            .overlay {
+              position: absolute;
+              width: 50%;
+              height: 80%;
+              left: 5%;
+              top: 10%;
+              box-shadow: 0 0px 30px -10px rgba($color: $color-8, $alpha: 0.5);
+            }
+          }
+
+          .wrapper {
+            display: flex;
+            align-items: center;
+            padding: $space-xs;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 1;
+
+            i {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.714rem;
+              width: 24px;
+              height: 24px;
+              margin-right: $space-md;
+            }
+          }
+
+          & > * {
+            transition: all .3s ease;
+          }
+        }
+      }
+    }
+
+    .share {
+      display: flex;
+      flex-direction: column;
+      margin-top: $space-2xl;
+
+      .buttons {
+        display: flex;
+
+        button {
+          height: 35px;
+          width: 35px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 100%;
+          background-color: $color-2;
+          color: $font-color-1;
+          margin-top: $space-lg;
+          margin-right: $space-2xs;
+
+          &:hover {
+            background-color: $secondary-color;
+            color: $font-color-4;
+          }
+        }
+      }
+    }
+  }
+}

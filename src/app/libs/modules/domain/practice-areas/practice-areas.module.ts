@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PracticeAreasComponent } from './practice-areas.component';
+import { PracticeAreasComponent, PracticeAreasProvider } from './practice-areas.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [PracticeAreasComponent],
-  imports: [CommonModule],
+  providers: [PracticeAreasProvider],
+  imports: [CommonModule, RouterModule],
   exports: [PracticeAreasComponent]
 })
 export class PracticeAreasModule { }

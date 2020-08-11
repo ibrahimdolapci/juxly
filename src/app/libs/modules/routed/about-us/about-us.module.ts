@@ -10,7 +10,23 @@ import { ComponentsModule } from '../../../components';
   declarations: [AboutUsComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: AboutUsComponent }]),
+    RouterModule.forChild([{
+      path: '',
+      pathMatch: 'full',
+      component: AboutUsComponent,
+      data: {
+        breadcrumb: {
+          title: 'About Us',
+          links: [{
+            name: 'Home',
+            path: 'home'
+          }, {
+            name: 'About Us',
+            path: 'about-us'
+          }]
+        }
+      }
+    }]),
     ComponentsModule
   ]
 })

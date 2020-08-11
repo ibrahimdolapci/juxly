@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-attorney',
@@ -13,3 +14,4 @@ export class AttorneyComponent implements OnInit {
   }
 
 }
+export const AttorneyProvider = homeProvider({ order: 6, component: AttorneyComponent });

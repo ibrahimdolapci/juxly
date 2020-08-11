@@ -1,0 +1,28 @@
+<app-breadcrumb></app-breadcrumb>
+<div class="container">
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="sidebar">
+    <div class="practices">
+      <h4>Other Practices</h4>
+      <ul>
+        <li *ngFor="let item of practiceAreaService.list" [routerLink]="item.link" routerLinkActive="active">
+          <div class="wrapper">
+            <i class="icon" [ngClass]="'icon-'+item.icon"></i>
+            <span>{{item.name}}</span>
+          </div>
+          <div class="overlay"></div>
+        </li>
+      </ul>
+    </div>
+    <div class="share">
+      <h4>Share</h4>
+      <div class="buttons">
+        <button> <i class="icon icon-twitter"></i> </button>
+        <button> <i class="icon icon-facebook"></i> </button>
+        <button> <i class="icon icon-linkedin"></i> </button>
+      </div>
+    </div>
+  </div>
+</div>

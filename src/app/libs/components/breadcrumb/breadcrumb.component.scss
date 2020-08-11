@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: center;
   background-color: $secondary-color;
-  background-image: url(/assets/images/breadcrumb-bg.png);
+  background-image: url(/assets/images/breadcrumb-bg.webp);
   color: $font-color-4;
 }
 
@@ -29,12 +29,6 @@ ul {
     &:last-child {
       font-weight: 500;
 
-      &::before {
-        content: '-';
-        display: inline-block;
-        margin: 0 $space-3xs;
-      }
-
       a {
         color: $font-color-4;
         opacity: 1;
@@ -46,5 +40,11 @@ ul {
       color: $font-color-4;
       opacity: .5;
     }
+  }
+
+  li + li ::before {
+    content: '-';
+    display: inline-block;
+    margin: 0 $space-3xs;
   }
 }

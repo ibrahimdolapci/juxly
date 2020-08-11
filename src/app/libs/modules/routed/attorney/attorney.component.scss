@@ -12,7 +12,6 @@
     grid-column-gap: $space-xl;
     grid-row-gap: $space-3xl;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(2, 400px);
 
     .attorney {
       position: relative;
@@ -20,6 +19,7 @@
       cursor: pointer;
 
       img {
+        display: flex;
         width: 100%;
       }
 

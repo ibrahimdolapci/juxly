@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
     route: "about-us"
   }, {
     name: "Practice Area",
-    route: "practice-area"
+    route: "practice-areas"
   }, {
     name: "Attorney",
     route: "attorney"

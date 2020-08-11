@@ -15,7 +15,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.CriminalJustice,
       vote:1
     }, {
@@ -23,7 +23,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.CulturalSchemas,
       vote:2
     }, {
@@ -31,7 +31,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.LaborLaw,
       vote:2
     }, {
@@ -39,7 +39,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.LegalAdvise,
       vote:2
     }, {
@@ -47,7 +47,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.ProBonoWork,
       vote:4
     }, {
@@ -55,7 +55,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.CriminalJustice,
       vote:5
     }, {
@@ -63,7 +63,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.LaborLaw,
       vote:2
     }, {
@@ -71,7 +71,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.LegalAdvise,
       vote:3
     }, {
@@ -79,7 +79,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.ProBonoWork,
       vote:2
     }, {
@@ -87,7 +87,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.CriminalJustice,
       vote:1
     }, {
@@ -95,7 +95,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.LaborLaw,
       vote:4
     }, {
@@ -103,7 +103,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.LegalAdvise,
       vote:5
     }, {
@@ -111,7 +111,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.ProBonoWork,
       vote:3
     }, {
@@ -119,7 +119,7 @@ export class BlogService {
       topic: 'DIVORCE SUIT',
       title: 'Lawyer assistance',
       content: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et...',
-      coverImage: '/assets/images/home/blog-1.png',
+      coverImage: '/assets/images/home/blog-1.webp',
       category: Categories.CriminalJustice,
       vote:2
     }];

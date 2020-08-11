@@ -8,7 +8,23 @@ import { ComponentsModule } from '../../../components';
   declarations: [AttorneyComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: AttorneyComponent }]),
+    RouterModule.forChild([{
+      path: '',
+      pathMatch: 'full',
+      component: AttorneyComponent,
+      data: {
+        breadcrumb: {
+          title: 'Attorney',
+          links: [{
+            name: 'Home',
+            path: 'home'
+          }, {
+            name: 'Attorney',
+            path: 'attorney'
+          }]
+        }
+      }
+    }]),
     ComponentsModule
   ]
 })

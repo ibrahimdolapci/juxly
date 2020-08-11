@@ -2,36 +2,110 @@
 @import "variables/colors";
 
 .container {
-  padding: $space-lg 20%;
+  padding: $space-lg 5%;
 }
 
 agm-map {
+  margin: $space-lg 5%;
   height: 400px;
+  display: block;
 }
 
-form {
-  display: grid;
-  grid-gap: $space-sm $space-lg;
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: end;
+.content {
+  margin: $space-3xl auto;
+  display: flex;
+  flex-direction: row;
+  padding: 0 20%;
+  color: $font-color-1;
 
-  .form-control {
+  .address-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: $space-3xl;
+
+    p {
+      margin: $space-lg 0;
+      font-weight: 500;
+    }
+
+    .contact-item {
+      margin-bottom: $space-lg;
+      display: flex;
+
+      .icon {
+        font-size: 2.571rem;
+        color: $primary-color;
+        margin-right: $space-sm;
+        width: 40px;
+      }
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .title {
+          font-weight: 600;
+          color: $primary-color;
+        }
+
+        .data {
+          font-weight: 500;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .social-icons {
+      display: flex;
+      margin-top: $space;
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $space-xs;
+        border: 1.5px solid $secondary-color;
+        border-radius: 100%;
+        box-sizing: border-box;
+        height: 36px;
+        width: 36px;
+      }
+    }
+  }
+
+  .form {
     width: 100%;
-  }
 
-  .message {
-    grid-column: 1 / -1;
-  }
+    h4 {
+      margin-bottom: $space-lg;
+    }
 
-  button {
-    grid-column-start: 2;
-    width: min-content;
-    padding: $space-md $space-2xl;
-    color: $font-color-4;
-    background-color: $primary-color;
-    white-space: nowrap;
-    border-radius: 30px;
-    font-weight: 500;
-    text-transform: uppercase;
+    form {
+      display: grid;
+      grid-gap: $space-sm $space-lg;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: end;
+
+      .form-control {
+        width: 100%;
+      }
+
+      .message {
+        grid-column: 1 / -1;
+      }
+
+      button {
+        grid-column-start: 2;
+        width: min-content;
+        padding: $space-md $space-2xl;
+        color: $font-color-4;
+        background-color: $primary-color;
+        white-space: nowrap;
+        border-radius: 30px;
+        font-weight: 500;
+        text-transform: uppercase;
+      }
+    }
   }
 }

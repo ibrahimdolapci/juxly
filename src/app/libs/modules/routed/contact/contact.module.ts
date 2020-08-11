@@ -10,7 +10,23 @@ import { ReactiveFormsModule } from '@angular/forms';
   declarations: [ContactComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild([{ path: '', pathMatch: 'full', component: ContactComponent }]),
+    RouterModule.forChild([{
+      path: '',
+      pathMatch: 'full',
+      component: ContactComponent,
+      data: {
+        breadcrumb: {
+          title: 'Contact',
+          links: [{
+            name: 'Home',
+            path: 'home'
+          }, {
+            name: 'Contact',
+            path: 'contact'
+          }]
+        }
+      }
+    }]),
     ComponentsModule,
     AgmCoreModule.forRoot({ apiKey: 'AIzaSyDERX1AbFpcYgEyluJ25BavLjbEAN-At3o' }),
     ReactiveFormsModule

@@ -21,12 +21,17 @@ const routes: Routes = [{
   path: "contact",
   loadChildren: () => import('./libs/modules/routed/contact/contact.module').then(module => module.ContactPageModule)
 }, {
-  path: "practice-area",
-  loadChildren: () => import('./libs/modules/routed/practice-area/practice-area.module').then(module => module.PracticeAreaPageModule)
+  path: "practice-areas",
+  loadChildren: () => import('./libs/modules/routed/practice-areas/practice-areas.module').then(module => module.PracticeAreasPageModule)
+}, {
+  path: 'practice-area-detail',
+  loadChildren: () => import('./libs/modules/routed/practice-area-detail/practice-area-detail.module').then(module => module.PracticeAreaDetailModule)
 }];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    initialNavigation: 'enabled'
+})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

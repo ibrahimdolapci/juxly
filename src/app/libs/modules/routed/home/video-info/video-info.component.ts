@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-video-info',
@@ -13,3 +14,4 @@ export class VideoInfoComponent implements OnInit {
   }
 
 }
+export const VideoInfoProvider = homeProvider({ order: 3, component: VideoInfoComponent });

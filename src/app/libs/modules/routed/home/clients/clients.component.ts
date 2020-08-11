@@ -1,4 +1,5 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-clients',
@@ -9,11 +10,11 @@ export class ClientsComponent {
 
   selectedIndex = 1;
   images = [
-    'assets/images/home/client-1.png',
-    'assets/images/home/client-1.png',
-    'assets/images/home/client-1.png',
-    'assets/images/home/client-1.png',
-    'assets/images/home/client-1.png'
+    'assets/images/home/client-1.webp',
+    'assets/images/home/client-1.webp',
+    'assets/images/home/client-1.webp',
+    'assets/images/home/client-1.webp',
+    'assets/images/home/client-1.webp'
   ];
 
   @ViewChild('container', { static: false }) scrollContainer: ElementRef;
@@ -41,3 +42,5 @@ export class ClientsComponent {
     element.scrollTo(index * 90, 0);
   }
 }
+
+export const ClientsProvider = homeProvider({ order: 9, component: ClientsComponent });

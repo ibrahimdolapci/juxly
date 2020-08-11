@@ -21,80 +21,72 @@
 
 .practice-areas {
   margin-top: $space-xl;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: $space-lg;
 
-  .row {
+  .item {
+    flex-grow: 1;
     display: flex;
-    margin-bottom: $space-lg;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $color-5;
+    position: relative;
+    padding: $space-lg $space-md $space $space-md;
+    transition: all .2s ease;
+    cursor: pointer;
 
-    .item {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      border: 1px solid $color-5;
-      position: relative;
-      padding: $space-lg $space-md $space $space-md;
-      transition: all .2s ease;
-      cursor: pointer;
+    i {
+      font-size: 3.142rem;
+      color: $primary-color;
+    }
+
+    h6 {
+      margin-top: $space-sm;
+    }
+
+    p {
+      margin-top: $space-xs;
+      opacity: .75;
+      line-height: 1.857rem;
+      text-align: center;
+    }
+
+    button {
+      margin-top: $space-xs;
+      visibility: hidden;
+    }
+
+    &::after {
+      content: "";
+      height: 8px;
+      width: 8px;
+      position: absolute;
+      background-color: $color-5;
+      right: 0;
+      bottom: 0;
+    }
+
+    &:hover {
+      color: $font-color-4;
+      transform: scale(1.1);
+      background-image: url("/assets/images/home/practice-area-1.webp");
+      background-color: $primary-color;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
 
       i {
-        font-size: 3.142rem;
-        color: $primary-color;
-      }
-
-      h6 {
-        margin-top: $space-sm;
-      }
-
-      p {
-        margin-top: $space-xs;
-        opacity: .75;
-        line-height: 1.857rem;
-        text-align: center;
+        color: $font-color-4;
       }
 
       button {
-        margin-top: $space-xs;
-        visibility: hidden;
+        visibility: visible;
       }
 
       &::after {
-        content: "";
-        height: 8px;
-        width: 8px;
-        position: absolute;
-        background-color: $color-5;
-        right: 0;
-        bottom: 0;
-      }
-
-      &:not(:first-child) {
-        margin-left: $space-lg;
-      }
-
-      &:hover {
-        color: $font-color-4;
-        transform: scale(1.1);
-        background-image: url("/assets/images/home/practice-area-1.png");
-        background-color: $primary-color;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-
-        i {
-          color: $font-color-4;
-        }
-
-        button {
-          visibility: visible;
-        }
-
-        &::after {
-          display: none;
-        }
+        display: none;
       }
     }
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-who-we-are',
@@ -13,3 +14,5 @@ export class WhoWeAreComponent implements OnInit {
   }
 
 }
+
+export const WhoWeAreProvider = homeProvider({ order: 2, component: WhoWeAreComponent });

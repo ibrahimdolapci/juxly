@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from '@libs/services/blog.service';
 import { IBlog } from '@libs/interfaces';
+import { homeProvider } from '../home.provider';
 
 @Component({
   selector: 'app-blog',
@@ -17,3 +18,5 @@ export class BlogComponent implements OnInit {
   }
 
 }
+
+export const BlogProvider = homeProvider({ order: 10, component: BlogComponent });
